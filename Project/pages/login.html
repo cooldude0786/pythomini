@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+
+{% block temp %}
+<center>
+    <div class="container">
+        <form action="logged" method="POST">
+            {% csrf_token %}
+            <div class="d-flex flex-column col-md-6 rounded border-login shadow p-5">
+                <div>
+                    <img src="../static/img/avatar.png" class="avatar-login form-group">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" name="InputEmail" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" name="InputPassword" placeholder="Password">
+                </div>
+                <small class="form-text text-muted">{{data.key}}</small>
+                <button type="submit" class="btn btn-primary width-96">Submit</button>
+            </div>
+        </form>
+        <!-- <div class="login-box-feild">1</div>
+        <div class="login-box-feild">Name</div>
+        <div class="login-box-feild">Password</div>
+        <div class="login-box-feild">4</div>
+        <div class="login-box-feild">5</div> -->
+    </div>
+</center>
+{% endblock %}

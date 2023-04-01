@@ -1,0 +1,8 @@
+body{
+    background-color: darkblue  ;
+}
+.imgngoImg{
+    height: 250px;
+    max-width: max-content !important;
+}
+.bg-corn{background: cornsilk;}
