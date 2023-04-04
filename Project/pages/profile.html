@@ -60,8 +60,115 @@
                 </div>
             </div>
         </div>
-        <div>
-        </div>
-    </div>
 
-    {% endblock %}
+        <div class="py-4 sub-conten">
+            <div class=" col-sm-12 d-flex py-3 rounded flex-wrap">
+                <div class="d-flex px-3">
+                    <img src="https://www.apetogentleman.com/wp-content/uploads/2018/06/top-male-models.jpg"
+                        class="founder-img p-2">
+                    <div class="d-flex flex-column p-2">
+                        <span class="text-success text-capitalize">khizar Shaikh</span>
+                        <span class="dash"></span>
+                        <small>founder of ngohub.com</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-4 sub-conten">
+            <div class=" col-sm-12 d-flex py-3 rounded flex-wrap">
+                <div class="col-sm-12 d-flex flex-column">
+                    <span>
+                        Strength
+                    </span>
+                    <span class="dash"></span>
+                    <div class="pl-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas optio necessitatibus neque
+                        magnam vel odio ratione adipisci aspernatur? Vero modi et necessitatibus dignissimos
+                        voluptatibus blanditiis provident similique quas accusamus? Maiores.</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="py-4 sub-conten">
+            <div class=" col-sm-12 d-flex justify-content-around py-3 rounded ">
+                <div class="contact_us col-md-12">
+                    <div class="form_ col-md-6">
+                        <div class="innerform">
+                            <div class="form_tittle">
+                                Contact Us
+                            </div>
+                            <div class="form_body">
+                                <form method="POSt" class="fbody">
+                                    {% csrf_token %}
+                                    <div class="form_row1">
+                                        <div class="frow1_1">
+                                            <div class="row1_1tittle">
+                                                First Name
+                                            </div>
+                                            <div class="row1_1inputbox">
+                                                <input type="text" class="row1_1ib"><br>
+                                            </div>
+                                        </div>
+                                        <div class="frow1_2">
+                                            <div class="row1_2tittle">
+                                                Last Name
+                                            </div>
+                                            <div class="row1_2inputbox">
+                                                <input type="text" class="row1_2ib"><br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_row2">
+                                        <div class="frow2_1">
+                                            <div class="row2_1tittle">
+                                                Email
+                                            </div>
+                                            <div class="row2_1inputbox">
+                                                <input type="email" class="row2_1ib"><br>
+                                            </div>
+                                        </div>
+                                        <div class="frow2_2">
+                                            <div class="row2_2tittle">
+                                                Phone
+                                            </div>
+                                            <div class="row2_2inputbox">
+                                                <input type="number" class="row2_2ib"><br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_row3">
+                                        <div class="row3_1tittle">
+                                            Your Message
+                                        </div>
+                                        <textarea class="row3_txtarea">
+                                        </textarea>
+                                    </div>
+                                    <div class="formsub">
+                                        <div class="formsubbtm1">
+                                            <input type="submit" value="SEND MESSAGE" class="fsubbtm1">
+                                        </div>
+                                        <div class="formsubtxt">or use</div>
+                                        <div class="formsubbtm2">
+                                            <button class="fsubbtm2">
+                                                <i class="fa-brands fa-facebook-messenger">Messenger</i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map_ col-md-6">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15072.940071541443!2d72.83972019999999!3d19.1849348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b6ee06ebad2b%3A0x9c288235c433657d!2sInfiniti%20Mall!5e0!3m2!1sen!2sin!4v1646043055831!5m2!1sen!2sin"
+                            width="100%" height="525" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div>
+    </div>
+</div>
+
+{% endblock %}
