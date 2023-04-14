@@ -3,5 +3,12 @@
     padding-bottom: .5rem!important;
 }
 .border-login{
-        border: 2px solid #dee2e6!important;
+    border-top:6px solid firebrick;
+}
+.avatar-login{
+    height: 50px !important;
+    width: 50px !important;
+}
+.width-96{
+    width: 96px;
 }

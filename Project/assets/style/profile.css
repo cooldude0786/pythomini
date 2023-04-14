@@ -1,0 +1,141 @@
+.circular--square {
+    border-radius: 50% !important;
+    width: 200px;
+    height: 200px;
+}
+
+.underline-1 {
+    border-top: 4px solid orange;
+    border-top-right-radius: 7px;
+    border-bottom: 4px solid orange;
+    border-bottom-right-radius: 7px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 7px;
+}
+
+.underline-2 {
+    border-top: 4px solid white;
+    border-top-right-radius: 7px;
+    border-bottom: 4px solid white;
+    border-bottom-right-radius: 7px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 7px;
+}
+
+.underline-3 {
+    border-top: 4px solid green;
+    border-top-right-radius: 7px;
+    border-bottom: 4px solid green;
+    border-bottom-right-radius: 7px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 7px;
+}
+
+.flag-main {
+    position: relative;
+}
+
+.flag-main .circle {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: 0;
+    left: calc(50% - 5.5px);
+    bottom: 0;
+    animation: ashok-chakra 4s linear infinite;
+}
+
+/* .sub-conten > :hover{
+    box-shadow: 0 .5rem 1rem rgba(212, 21, 142, 0.219)!important;
+} */
+
+
+.dash{
+    height: 1px;
+    background: black;
+}
+.founder-img{
+    border-radius: 50% !important;
+    width: 120px;
+    height: 120px;
+}
+.contact_us{
+	display: flex;
+	padding: 14px 0px 0px 0px;
+}
+.form_{
+	background-color: whitesmoke;}
+.innerform{
+	padding: 2% 2%;
+	background: transparent;
+}
+.form_tittle{
+	background: transparent;
+	padding: 8% 8% 0% 8%;
+	font-family: 'Karla', sans-serif;
+	font-size: 30px;
+}
+.form_body{
+	background: transparent;
+	padding:  3% 8% 4% 8%;
+}
+.fbody{
+	background: transparent;
+    display: flex;
+    flex-flow: column;
+    font-family: 'Karla', sans-serif;
+}
+.form_row1{background: transparent;display: flex;justify-content: space-evenly;}
+.frow1_1{background:transparent;display:flex;flex-flow:column;width:50%;padding:0px 10px 5px 0px;}
+.row1_1tittle{background: transparent;font-size:14px;}
+.row1_1inputbox{height:30px;padding-top: 5px;background: transparent;}
+.row1_1ib{width:100%;height:100%;border-radius:6px;border:1px solid #d3cece;}
+.frow1_2{background: transparent;width:50%;padding:0px 0px 0px 10px;}
+.row1_2tittle{background: transparent;font-size:14px;}
+.row1_2inputbox{height:30px;padding-top: 5px;background: transparent;}
+.row1_2ib{width:100%;height:100%;border-radius:6px;border:1px solid #d3cece;}
+
+.form_row2{background: transparent;display: flex;justify-content: space-evenly;}
+.frow2_1{background:transparent;display:flex;flex-flow:column;width:50%;padding:0px 10px 5px 0px;}
+.row2_1tittle{background: transparent;font-size:14px;}
+.row2_1inputbox{height:30px;padding-top: 5px;background: transparent;}
+.row2_1ib{width:100%;height:100%;border-radius:6px;border:1px solid #d3cece;}
+.frow2_2{background: transparent;width:50%;padding:0px 0px 0px 10px;}
+.row2_2tittle{background: transparent;font-size:14px;}
+.row2_2inputbox{height:30px;padding-top: 5px;background: transparent;}
+.row2_2ib{width:100%;height:100%;border-radius:6px;border:1px solid #d3cece;}
+
+.form_row3{background: transparent;}
+.row3_1tittle{height:30px;padding-top: 5px;background: transparent;}
+.row3_txtarea{border:1px solid #d3cece;border-radius: 5px;height: 72px;width:95%;}
+.formsub{background: transparent;display: flex;align-items: center;padding-top:8%;}
+.formsubbtm1{background: transparent;}
+.fsubbtm1{    border-style: none;
+    background-color: #48a772;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+	width: 100%;
+	height: 32px;}
+.formsubtxt{background: transparent;padding: 0px 4%;}
+.formsubbtm2{width: 130px;background: transparent;}
+.fsubbtm2{    
+	border: 2px solid #48a772;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    padding: 5px 3%;
+    font-size: 12px;
+    width: 100%;
+}
+@keyframes ashok-chakra {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

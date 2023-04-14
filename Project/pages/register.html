@@ -1,0 +1,67 @@
+{% extends 'index.html' %}
+
+{% block temp %}
+<div class="container col-md-10">
+    <form action="uploadDetail" method="POST" enctype="multipart/fomr-data">
+        {% csrf_token %}
+        <div class="form-group row">
+            <label for="ngo name" class="col-sm-3 col-form-label-lg">Ngo name</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control form-control-lg" name="NgoName" placeholder="Ngo's name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="Slogan" class="col-sm-3 col-form-label-lg">Enter Slogan</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control form-control-lg" id="Slogan" name="slogan" placeholder="Slogan">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="Vision" class="col-sm-3 col-form-label-lg">Vision</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control form-control-lg" id="Vision" name="Vision" placeholder="Vision">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="FounderStatement" class="col-sm-3 col-form-label-lg">Founder's Statement</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control form-control-lg" id="FounderStatement" name="founderstmt" placeholder="Statement..">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="StartDate" class="col-sm-3 col-form-label-lg">Start in</label>
+            <div class="col-sm-9">
+                <input type="date" class="form-control form-control-lg" name="StartDate">
+            </div>
+        </div><div class="form-group row">
+            <label for="StartDate" class="col-sm-3 col-form-label-lg">Focus on </label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control form-control-lg" name="type" placeholder="like child labouring,eye donantion...">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="Originate" class="col-sm-3 col-form-label-lg">Orignated Frome</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control form-control-lg" id="Originate" name="originState" placeholder="State Name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="WebsiteUrl" class="col-sm-3 col-form-label-lg">Website Url</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control form-control-lg" id="WebsiteUrl" name="officialwebsite" placeholder="Url...">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="Strength" class="col-sm-3 col-form-label-lg">Strength of Ngo</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control form-control-lg" id="Strength" name="stength" placeholder="Strength">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-12 d-flex justify-content-end">
+              <button type="submit" class="btn btn-primary">Comfirm</button>
+            </div>
+          </div>
+    </form>
+</div>
+{% endblock %}
