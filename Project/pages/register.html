@@ -1,67 +1,78 @@
 {% extends 'index.html' %}
 
 {% block temp %}
+{% if messages %}
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+    {% endfor %}
+{% endif %}
 <div class="container col-md-10">
-    <form action="uploadDetail" method="POST" enctype="multipart/fomr-data">
+    <form action="uploadDetail?abc=123" method="POST" enctype="multipart/fomr-data">
         {% csrf_token %}
         <div class="form-group row">
             <label for="ngo name" class="col-sm-3 col-form-label-lg">Ngo name</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control form-control-lg" name="NgoName" placeholder="Ngo's name">
+                <input  type="text" class="form-control form-control-lg" name="NgoName" {% if messages %} value="{{ request.GET.NgoName }}" placeholder="{{ request.GET.NgoName }}" {% else %} placeholder="Ngo Name" {% endif %}>
             </div>
         </div>
         <div class="form-group row">
             <label for="Slogan" class="col-sm-3 col-form-label-lg">Enter Slogan</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control form-control-lg" id="Slogan" name="slogan" placeholder="Slogan">
+                <input  type="text" class="form-control form-control-lg" id="Slogan" name="slogan" {% if messages %} value="{{ request.GET.slogan }}" placeholder="{{ request.GET.slogan }}" {% else %} placeholder="Slogan" {% endif %} >
             </div>
         </div>
         <div class="form-group row">
             <label for="Vision" class="col-sm-3 col-form-label-lg">Vision</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control form-control-lg" id="Vision" name="Vision" placeholder="Vision">
+                <input  type="text" class="form-control form-control-lg" id="Vision" name="Vision" {% if messages %} value="{{ request.GET.Vision }}" placeholder="{{ request.GET.Vision }}" {% else %} placeholder="Vision" {% endif %} >
             </div>
         </div>
         <div class="form-group row">
             <label for="FounderStatement" class="col-sm-3 col-form-label-lg">Founder's Statement</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control form-control-lg" id="FounderStatement" name="founderstmt" placeholder="Statement..">
+                <input  type="text" class="form-control form-control-lg" id="FounderStatement" name="founderstmt"
+                    {% if messages %} value="{{ request.GET.founderstmt }}" placeholder="{{ request.GET.founderstmt }}" {% else %} placeholder="Statement.." {% endif %} >
             </div>
         </div>
         <div class="form-group row">
             <label for="StartDate" class="col-sm-3 col-form-label-lg">Start in</label>
             <div class="col-sm-9">
-                <input type="date" class="form-control form-control-lg" name="StartDate">
+                <input  type="date" class="form-control form-control-lg" name="StartDate" {% if messages %} value="{{ request.GET.StartDate }}" placeholder="{{ request.GET.StartDate }}" {% endif %}>
             </div>
-        </div><div class="form-group row">
+        </div>
+        <div class="form-group row">
             <label for="StartDate" class="col-sm-3 col-form-label-lg">Focus on </label>
             <div class="col-sm-9">
-                <input type="text" class="form-control form-control-lg" name="type" placeholder="like child labouring,eye donantion...">
+                <input  type="text" class="form-control form-control-lg" name="type"
+                    {% if messages %} value="{{ request.GET.type }}" placeholder="{{ request.GET.type }}" {% else %} placeholder="like child labouring,eye donantion..." {% endif %} >
             </div>
         </div>
         <div class="form-group row">
             <label for="Originate" class="col-sm-3 col-form-label-lg">Orignated Frome</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control form-control-lg" id="Originate" name="originState" placeholder="State Name">
+                <input  type="text" class="form-control form-control-lg" id="Originate" name="originState"
+                    {% if messages %} value="{{ request.GET.originState }}" placeholder="{{ request.GET.originState }}" {% else %} placeholder="State Name" {% endif %} >
             </div>
         </div>
         <div class="form-group row">
             <label for="WebsiteUrl" class="col-sm-3 col-form-label-lg">Website Url</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control form-control-lg" id="WebsiteUrl" name="officialwebsite" placeholder="Url...">
+                <input  type="text" class="form-control form-control-lg" id="WebsiteUrl" name="officialwebsite"
+                    {% if messages %} value="{{ request.GET.officialwebsite }}" placeholder="{{ request.GET.officialwebsite }}" {% else %} placeholder="Url..." {% endif %} >
             </div>
         </div>
         <div class="form-group row">
             <label for="Strength" class="col-sm-3 col-form-label-lg">Strength of Ngo</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control form-control-lg" id="Strength" name="stength" placeholder="Strength">
+                <input  type="text" class="form-control form-control-lg" id="Strength" name="stength"
+                    {% if messages %} value="{{ request.GET.stength }}" placeholder="{{ request.GET.stength }}" {% else %} placeholder="Strength" {% endif %} >
             </div>
         </div>
         <div class="form-group row">
             <div class="col-sm-12 d-flex justify-content-end">
-              <button type="submit" class="btn btn-primary">Comfirm</button>
+                <button type="submit" class="btn btn-primary">Comfirm</button>
             </div>
-          </div>
+        </div>
     </form>
 </div>
 {% endblock %}
