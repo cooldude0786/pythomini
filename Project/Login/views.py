@@ -22,7 +22,7 @@ def loggedin(request):
         # if passw != " ":
         #     obj1={'pass':"empty password"}
         #     pass
-        url = "/profile/"
+        url = "/login/"
         # return HttpResponse("gdone ")
         return HttpResponseRedirect(url)
     else:

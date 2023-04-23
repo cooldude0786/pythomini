@@ -2,22 +2,22 @@
 
 {% block temp %}
 <div class="container d-flex flex-column">
-    <div class="header d-flex">
+    <div class="header d-flex flex-wrap">
         <div class="icon col-md-3">
             <img src="https://www.apetogentleman.com/wp-content/uploads/2018/06/top-male-models.jpg"
                 class="circular--square p-2">
         </div>
         <div class="py-2 pb-0 text-right col-md-8 d-flex flex-column justify-content-between">
-            <h1>{{data.ngoname}}</h1>
+            <h1 class="pb-5">{{data.ngoname}}</h1>
             <!-- <h1>{{data}}</h1> -->
-            <div class="pb-4 pl-0">
-                <span>{{data.slogan}}</span>
+            <div class="pt-2 pb-4 pl-0 flag-su-main">
                 <div class="flag-main">
                     <div class="underline-1 w-100"></div>
                     <div class="underline-2 w-100"></div>
                     <div class="underline-3 w-100"></div>
                     <img src="https://i.ibb.co/qy2Xkr4/ashoka-chakra.png" class="circle">
                 </div>
+                <span>{{data.slogan}}</span>
             </div>
         </div>
     </div>
@@ -54,9 +54,9 @@
                 </div>
             </div>
             <div class="py-4 sub-conten">
-                <div class=" col-sm-12 d-flex justify-content-around py-3 rounded ">
+                <div class=" col-sm-12 d-flex flex-wrap justify-content-around py-3 rounded ">
                     <div class="col-sm-2">URls <i class="fa-sharp fa-solid fa-link" style="color: #4470bb;"></i></div>
-                    <div class="col-sm-7"><a href="{{data.url}}">{{data.url}}</a>
+                    <div class="col-sm-7 text-break"><a href="{{data.url}}">{{data.url}}</a>
                     </div>
                 </div>
             </div>
@@ -83,9 +83,86 @@
                         <span class="dash"></span>
                         <div class="pl-4">{{data.capacity}}</div>
                     </div>
-
                 </div>
             </div>
+            <div class="py-4 sub-conten">
+                <div class=" col-sm-12 d-flex justify-content-around py-3 rounded ">
+                    <div class="contact_us col-md-12">
+                        <div class="form_ col-md-6">
+                            <div class="innerform">
+                                <div class="form_tittle">
+                                    Contact Us
+                                </div>
+                                <div class="form_body">
+                                    <form method="POSt" class="fbody">
+                                        {% csrf_token %}
+                                        <div class="form_row1">
+                                            <div class="frow1_1">
+                                                <div class="row1_1tittle">
+                                                    First Name
+                                                </div>
+                                                <div class="row1_1inputbox">
+                                                    <input type="text" class="row1_1ib"><br>
+                                                </div>
+                                            </div>
+                                            <div class="frow1_2">
+                                                <div class="row1_2tittle">
+                                                    Last Name
+                                                </div>
+                                                <div class="row1_2inputbox">
+                                                    <input type="text" class="row1_2ib"><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_row2">
+                                            <div class="frow2_1">
+                                                <div class="row2_1tittle">
+                                                    Email
+                                                </div>
+                                                <div class="row2_1inputbox">
+                                                    <input type="email" class="row2_1ib"><br>
+                                                </div>
+                                            </div>
+                                            <div class="frow2_2">
+                                                <div class="row2_2tittle">
+                                                    Phone
+                                                </div>
+                                                <div class="row2_2inputbox">
+                                                    <input type="number" class="row2_2ib"><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_row3">
+                                            <div class="row3_1tittle">
+                                                Your Message
+                                            </div>
+                                            <textarea class="row3_txtarea">
+                                            </textarea>
+                                        </div>
+                                        <div class="formsub">
+                                            <div class="formsubbtm1">
+                                                <input type="submit" value="SEND MESSAGE" class="fsubbtm1">
+                                            </div>
+                                            <div class="formsubtxt">or use</div>
+                                            <div class="formsubbtm2">
+                                                <button class="fsubbtm2">
+                                                    <i class="fa-brands fa-facebook-messenger">Messenger</i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map_ col-md-6">
+                            <iframe
+                                src={{data.googleLocation}}
+                                width="100%" height="525" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

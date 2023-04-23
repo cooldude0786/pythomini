@@ -7,7 +7,7 @@
     {% endfor %}
 {% endif %}
 <div class="container col-md-10">
-    <form action="uploadDetail?abc=123" method="POST" enctype="multipart/fomr-data">
+    <form action="uploadDetail" method="POST" enctype="multipart/fomr-data">
         {% csrf_token %}
         <div class="form-group row">
             <label for="ngo name" class="col-sm-3 col-form-label-lg">Ngo name</label>
@@ -66,6 +66,13 @@
             <div class="col-sm-9">
                 <input  type="text" class="form-control form-control-lg" id="Strength" name="stength"
                     {% if messages %} value="{{ request.GET.stength }}" placeholder="{{ request.GET.stength }}" {% else %} placeholder="Strength" {% endif %} >
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="googleLocation" class="col-sm-3 col-form-label-lg">Enter You Location</label>
+            <div class="col-sm-9">
+                <input  type="text" class="form-control form-control-lg" id="googleLocation" name="loc"
+                    {% if messages %} value="{{ request.GET.googleLocation }}" placeholder="{{ request.GET.googleLocation }}" {% else %} placeholder="google->maps->selection->share->'embed map'>copy html" {% endif %} >
             </div>
         </div>
         <div class="form-group row">
