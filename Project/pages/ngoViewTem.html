@@ -1,41 +1,35 @@
 {% extends 'index.html' %}
 
 {% block temp %}
-<div class="bg-corn p-2 rounded d-flex flex-wrap">
-    <div><img class="imgngoImg col-sm-4"
+{% for item in data %}
+<form action="/profile/" method="POST" >
+    {% csrf_token %}
+    <input type="text" style="display: none;"value="{{item.1}}" name="ngoname">
+<button  class="bg-corn p-2 button rounded d-flex border-0  my-2 ">
+    <div class="col-sm-4"><img class="imgngoImg col-sm-12"
             src="https://images-platform.99static.com//NnfsZfhWECwMKeuj4yxeInkbKN8=/0x126:874x1000/fit-in/500x500/99designs-contests-attachments/35/35657/attachment_35657633">
     </div>
-    <div class="col-sm-7">
+    <div class="col-sm-8 h-100">
         <div class="row d-flex flex-column justify-content-around h-100">
             <div class="row d-flex w-100">
                 <div class="col-md-2">Name:</div>
-                <div class="col-md-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa iste consectetur
-                    quisquam neque
-                    repudiandae ipsum mollitia enim possimus facere commodi,
-                    dolores quis aspernatur tempora repellendus amet nobis libero adipisci explicabo.</div>
+                <div class="col-md-10" style="text-align: start;">{{item.1}}</div>
             </div>
             <div class="row d-flex w-100">
                 <div class="col-md-2">Motive:</div>
-                <div class="col-md-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa iste consectetur
-                    quisquam neque
-                    repudiandae ipsum mollitia enim possimus facere commodi,
-                    dolores quis aspernatur tempora repellendus amet nobis libero adipisci explicabo.</div>
+                <div class="col-md-10" style="text-align: start;">{{item.2}}</div>
             </div>
             <div class="row d-flex w-100">
                 <div class="col-md-2">Since:</div>
-                <div class="col-md-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa iste consectetur
-                    quisquam neque
-                    repudiandae ipsum mollitia enim possimus facere commodi,
-                    dolores quis aspernatur tempora repellendus amet nobis libero adipisci explicabo.</div>
+                <div class="col-md-10" style="text-align: start;">{{item.3}}</div>
             </div>
             <div class="row d-flex w-100">
                 <div class="col-md-2">Social:</div>
-                <div class="col-md-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa iste consectetur
-                    quisquam neque
-                    repudiandae ipsum mollitia enim possimus facere commodi,
-                    dolores quis aspernatur tempora repellendus amet nobis libero adipisci explicabo.</div>
+                <div class="col-md-10" style="text-align: start;">{{item.4}}</div>
             </div>
         </div>
     </div>
-</div>
+</button>
+</form>
+{% endfor %}
 {% endblock %}

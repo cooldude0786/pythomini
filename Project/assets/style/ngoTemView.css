@@ -1,8 +1,33 @@
-body{
-    background-color: darkblue  ;
+body {
+    background-color: darkblue;
 }
-.imgngoImg{
-    height: 250px;
+
+.imgngoImg {
+    height: 175px;
     max-width: max-content !important;
 }
-.bg-corn{background: cornsilk;}
+
+.bg-corn {
+    background: cornsilk;
+    animation: fadeIn 3s;
+    height: 210px;
+    overflow: hidden;
+    margin-bottom: 36px !important;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(210px);
+        /* transform: translateX(210px); */
+        opacity: 0;
+        /* width: 50%; */
+        /* height: 0px; */
+    }
+    100% {
+        transform: translateY(0px);
+        /* transform: translateX(0px); */
+        opacity: 1;
+        /* width: 100%; */
+        /* height: 210px; */
+    }
+}
